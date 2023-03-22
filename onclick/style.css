@@ -1,0 +1,37 @@
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  margin: 0 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #666;
+}
+
+.play-pause-btn {
+  background-color: #5cb85c;
+}
+
+.play-pause-btn:hover {
+  background-color: #449d44;
+}
+
+.skip-btn {
+  background-color: #f0ad4e;
+}
+
+.skip-btn:hover {
+  background-color: #ec971f;
+}
+

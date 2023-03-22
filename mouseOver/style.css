@@ -1,0 +1,42 @@
+
+body{
+    background-color: #e6d3d3;
+    gap: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.product {
+    position: relative;
+    width: 200px;
+    height: 300px;
+  }
+  
+  .product img {
+    width: 20vmin;
+    height: 30vmin;
+    object-fit: cover;
+    object-position: center;
+  }
+  .product h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .product .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vmin;
+    height: 30vmin;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    text-align: center;
+  }
+  
+  
