@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="color-scheme" content="only">
+    <style>
+        img{
+            height: 50vmin;
+            width: 60vmin;
+            object-fit: cover;
+            background: #dfdfdf;
+        }
+    </style>
+</head>
+<body>
+    <img src="img.png" alt="">
+    <input type="file"><br>
+    <button>pick color</button>
+    <p></p>
+
+    <script>
+        const image = document.querySelector("img"),
+            input = document.querySelector("input"),
+            btn = document.querySelector("button"),
+            colorCode = document.querySelector("p");
+
+        input.addEventListener("change",()=>{
+            image.src=URL.createObjectURL(input.files[0]);
+        });
+
+        const pickcolor = async() =>{
+            const eyedropper = new EyeDropper();
+            const { sRGBHex } = await eyedropper.open();
+            // colorCode.innerText=sRGBHex;
+            console.log(sRGBHex);
+        };
+        btn.addEventListener("click",pickcolor);
+    </script>
+</body>
+</html>
+
+<!-- self-awaking function -->
+
+<!-- (() => {
+    const pickcolor = async() =>{
+      const eyedropper = new EyeDropper();
+      const { sRGBHex } = await eyedropper.open();
+      // colorCode.innerText=sRGBHex;
+      console.log(sRGBHex);
+    };
+    
+    pickcolor();
+  })(); -->
